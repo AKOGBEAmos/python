@@ -1,3 +1,5 @@
+from math import sqrt
+
 #fonction de détermination d'un nombre premier.
 def is_prime(number):
     """Un nombre premier n'a que deux diviseurs 1 et lui même.
