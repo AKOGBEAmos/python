@@ -4,7 +4,7 @@ def net_address(addr1, addr2, m):
         address2 = addr2.split('.')
     except:
         return -1
-
+   #On récupère chaque pack de 8 bit de l'adresse sous forme de valeur entière.
     address1 = [int(x) for x in address1]
     address2 = [int(x) for x in address2]
     
@@ -12,8 +12,9 @@ def net_address(addr1, addr2, m):
     j = 0
     
     while i <= 3:
+        #On convertit ces valeurs en binaire. Ex: 192=11000000
         a, b = bin(address1[i]), bin(address2[i])
-        
+        #On compare ensuite bit à bit chaque portion
         if (int(a, 2) & int(b, 2)) == int(a, 2):
             i += 1
             if (m - j) < 8:
