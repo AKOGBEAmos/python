@@ -1,0 +1,14 @@
+1 6 36
+Lorem ipsum dolor sit amet, consectetuer
+
+2 6 34
+adipiscing elit, sed diam nonummy nibh
+
+3 5 32
+euismod tincidunt ut laoreet dolore
+
+4 6 32
+magna aliquam erat volutpat. Ut wisi
+
+5 6 29
+enim ad minim veniam, quis nostrud
