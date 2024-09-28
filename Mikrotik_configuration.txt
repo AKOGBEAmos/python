@@ -1,0 +1,55 @@
+Changing router name
+/system identity set name= Ri
+
+Configuring dhcp client on the router
+/ip dhcp-client
+add interface ether i
+enable (line number)
+bridge
+print | add name "LAN"
+
+/ip dhcp-server
+setup
+...
+...
+ip firewall nat
+add chain=srcnat action=masquerade
+
+
+====>Les chaînes firewall
+Les actions 
+Ex: La règle chain=forward icmp action=drop
+Bloque tous les pings passant à  travers le routeur à l'aller comme au retour.
+
+Les ports 5678 et 20651 sont utilisés par les équipements Mikrotik dans leur fonctionnement
+
+Les logs de firewall permettent d'analyser les actions exécutées suivant les règles de filtrage que nous avons configuré afin de les ajuster ou les supprimer suivant le résultat excompté.
+
+Le NAT
+Le nat src est un réseau qu'on  place derrière un serveur NAT de sorte à  ce qu'on lui associe une adresse web publique pour aller sur internet.
+
+La chaîne dstnat avec l'action dstnat peut servir à rediriger les paquets vers un serveur proxy ou un autre équipement.
+
+La chaîne dstnat avec l'action redirect redirige les paquets vers le serveur lui même.
+
+		Recherche sur les Nat Helpers
+
+Les types de connexion:
+
+New - Invalid - Related - Established
+Les règles Firewall fonctionnent grâce aux Track Connections qui permet de suivre toutes les connexions s'effectuant sur votre routeur.
+
+Les chaînes Firewall sont en résumé:
+input
+output
+forward
+prerouting
+postrouting
+srcnat
+dstnat
+
+====>Quality of Service
+Cette option permet de configurer la bande passante attribuée à  des utilisateurs compte-tenu de la quantité maximale de données qu'on veut lui laisser consommer.
+On utilise le Per Connection Queue pour partager équitablement la bande passante entre tous les utilisateurs. 
+Pour faire cette configuration, il faut définir la liste des utilisateurs se partagant la bande passante compte-tenu de la Dest-Address List conçue ou de la src-Address List conçue.
+
