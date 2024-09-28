@@ -1,6 +1,0 @@
-La méthode map permet d'appliquer unr fonction à des élements d'une liste.
-La méthode filter permet de filter les sorties d'une liste en leur appliquznt une condition.
-On peut contruire une liste à  partir de la procédure d'unpacking pour à la fois énumérer les élements de la liste, effectuer les opérations modifiant les éléments de la liste et en même temps vérifier une condition  précise sur la liste.
-
-Les expressions génératrices
-Ce sont des méthodes permettant d'effectuer des opérations sur un grand nombre d'éléments en les parcourant directement. On peut ensuite les utiliser pour effectuer d'autres opérations sur les élements en sortie de sorte à créer des listes ou des ensembles.
