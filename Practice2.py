@@ -1,3 +1,5 @@
+import random
+
 # Data structures practice
 
 #Creating a list of my five top favorite food
@@ -21,4 +23,8 @@ favourite_book = {
 
 print(favourite_book)
 
-#Creating
+#Creating a random set
+list =  [random.randint(1,10) for i in range(8)]
+numbers = set(list)
+
+print(numbers)

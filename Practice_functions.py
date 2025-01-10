@@ -87,11 +87,12 @@ def even_odd(number):
 def prime_number(number):
     divider = 0
     for i in range(2, number):
-        if number % i == 0 :
+        if (divider > 1):
+            return False
+            break
+        elif number % i == 0 :
             divider += 1
-    if divider > 1 :
-        return False
-    else:
+    if (divider == 1):
         return True
 
 def perfect_number(number):
