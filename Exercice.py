@@ -1,7 +1,7 @@
 from math import sqrt
 
 def listElement(list):
-    for element in liste:
+    for element in list:
         print(element)
 
 def sumListe(liste):
