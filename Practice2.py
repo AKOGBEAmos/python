@@ -1,4 +1,5 @@
 import random
+import os
 
 # Data structures practice
 
@@ -45,4 +46,12 @@ def outer_func():
     inner_func()
 
 
-outer_func()
+#Working on Error handling 
+
+filename = input("Enter the name of the file: ")
+try: 
+    with open(filename, 'r'):
+        pass
+except FileNotFoundError as e:
+    print(f"Sorry, the file you are looking for is not found. {e}")
+

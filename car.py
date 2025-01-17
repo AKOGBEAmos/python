@@ -31,6 +31,23 @@ class Formula1Car(Car):
         speed = self.power / 2.415
         return round(speed,2)
 
+    def assign_position(self, position):
+        try:
+            if position > 99:
+                raise ValueTooHighError  
+            else: 
+                self.number = position
+        except:
+            print("Sorry but the value you try to assign is wrong. Try again.")
+
+# Error handling for wrong pilot number 
+class ValueTooHighError(Exception):
+    def __init__(self, position):
+        self.position =  position
+
+    def __str__(self):
+            return f"Sorry, but this number cannot be assigned."
+
 F1_contenders = []
 
 top_car = Car('Toyota', 'Camry', 2020, 5000.0)
@@ -65,3 +82,5 @@ for car in F1_contenders:
         top_car =  car
 
 print(f"The fastest  car for this run is: {top_car.make} {top_car.model} with a high speed of {top_speed} Km/h")
+
+car2.assign_position(102)
